@@ -9,5 +9,6 @@ RUN go build -o /cacheServer /main.go
 
 FROM scratch
 COPY --from=builder /cacheServer /
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 ENTRYPOINT ["/cacheServer"]
 
