@@ -1,9 +1,9 @@
 services:
-  cacheServer:
-    build: .
+  cacheserver:
+    build: ./
     ports:
       - "8700:8700"
     volumes:
       - cacheVol:/cache
 volumes:
-  cache:
+  cacheVol:
